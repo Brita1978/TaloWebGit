@@ -1,0 +1,46 @@
+﻿@model IEnumerable<TaloWeb.Talot>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Talot</h2>
+<br />
+<div>
+<a href='@Url.Action("Create", "Talo")' class="btn btn-primary">Lisää uusi</a>
+ </div>
+<br />
+
+@*
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TaloID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TalonSijainti)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaloID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TalonSijainti)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.TaloID }, new { @class = " btn btn-success" }) |
+                @* @Html.ActionLink("Details", "Details", new { id = item.TaloID }, new { @class = " btn btn-primary" }) |*@
+                @Html.ActionLink("Delete", "Delete", new { id = item.TaloID }, new { @class = " btn btn-danger" })
+            </td>
+        </tr>
+    }
+
+</table>

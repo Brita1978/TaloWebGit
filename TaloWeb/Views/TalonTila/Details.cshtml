@@ -1,0 +1,50 @@
+﻿@model TaloWeb.TalonTila
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TalonTila</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TalonTavoiteLampotila)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TalonTavoiteLampotila)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TalonNykyLampotila)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TalonNykyLampotila)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PVM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PVM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Talot.TalonSijainti)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Talot.TalonSijainti)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TalonTilaID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

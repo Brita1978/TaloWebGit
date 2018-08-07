@@ -1,0 +1,60 @@
+﻿@model IEnumerable<TaloWeb.TalonTila>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Talon tila</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Talot.TaloID)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Talot.TalonSijainti)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TalonTavoiteLampotila)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TalonNykyLampotila)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PVM)
+        </th>
+        
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TaloID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Talot.TalonSijainti)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TalonTavoiteLampotila)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TalonNykyLampotila) 
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PVM)
+        </td>
+
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.TalonTilaID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.TalonTilaID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.TalonTilaID })
+        </td>
+    </tr>
+}
+
+</table>

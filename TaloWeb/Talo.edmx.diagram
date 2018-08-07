@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d6f7e54a542847be883d0d39cfef8047" Name="Diagram1">
+        <EntityTypeShape EntityType="TaloModel.SaunanTila" Width="1.5" PointX="8" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaloModel.Saunat" Width="1.5" PointX="5.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaloModel.TalonTila" Width="1.5" PointX="3.125" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaloModel.Talot" Width="1.5" PointX="0.75" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaloModel.ValonTila" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TaloModel.Valot" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <AssociationConnector Association="TaloModel.FK__SaunanTil__Sauna__1BFD2C07" ManuallyRouted="false" />
+        <AssociationConnector Association="TaloModel.FK__TalonTila__TaloI__1273C1CD" ManuallyRouted="false" />
+        <AssociationConnector Association="TaloModel.FK__ValonTila__ValoI__173876EA" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

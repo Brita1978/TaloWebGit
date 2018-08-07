@@ -1,0 +1,53 @@
+﻿@model IEnumerable<TaloWeb.ValonTila>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Valot.ValonSijainti)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.valonTila1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ValonMaara)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PVM)
+        </th>
+        
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Valot.ValonSijainti)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.valonTila1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ValonMaara)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PVM)
+        </td>
+        
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.ValonTilaID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ValonTilaID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ValonTilaID })
+        </td>
+    </tr>
+}
+
+</table>
